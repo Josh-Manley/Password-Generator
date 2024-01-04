@@ -22,10 +22,18 @@ const typeOfFunction = [
   }
 ];
 
-let number = document.getElementById("numbers").checked;
-let symbol = document.getElementById("symbols").checked;
-let upper = document.getElementById("upperCase").checked;
-let lower = document.getElementById("lowerCase").checked;
+function generatePassword() {
+
+  let number = document.getElementById("numbers").checked;
+  let symbol = document.getElementById("symbols").checked;
+  let upper = document.getElementById("upperCase").checked;
+  let lower = document.getElementById("lowerCase").checked;
+
+  if (number + symbol + upper + lower ===0) {
+    alert("No box checked. Please check at least one box.");
+    return;
+  }
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
