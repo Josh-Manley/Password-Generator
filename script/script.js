@@ -32,7 +32,7 @@ function generatePassword() {
   let upper = document.getElementById("upperCase").checked;
   let lower = document.getElementById("lowerCase").checked;
 
-  if (number + symbol + upper + lower ===0) {
+  if (number + symbol + upper + lower === 0) {
     alert("No box checked. Please check at least one box.");
     return;
   }
@@ -41,16 +41,16 @@ function generatePassword() {
 
   let length = document.getElementById("length");
 
-  let pw = "";
+  let password = "";
 
-  while(pw.length < length.value) {
+  while(password.length < length.value) {
     let selectingFunction = typeOfFunction[Math.floor(Math.random() * typeOfFunction.length)];
     let isChecked = document.getElementById(selectingFunction.name).checked;
     if (isChecked) {
-      pw += selectingFunction();
+      password += selectingFunction();
     }
   }
-  passwordText.innerHTML = pw;
+  passwordText.innerHTML = password;
 }
 
 // Get references to the #generate element
