@@ -93,6 +93,16 @@ button[disabled] {
   background: #c0c7cf;
 }
 
+p {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+#length-label {
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
 .float-right {
   float: right;
 }
