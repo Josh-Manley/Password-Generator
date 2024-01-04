@@ -1,8 +1,11 @@
 // Assignment code here
-let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-let lowerCase = "abcdefghijklmnopqrstuvwxyz"
-let numbers = "0123456789"
-let symbols = "!@#$%^&*()_+~\`|}{[]:;?><,./-="
+const types = {
+  upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  lowerCase: "abcdefghijklmnopqrstuvwxyz",
+  numbers: "0123456789",
+  symbols: "!@#$%^&*()_+~\`|}{[]:;?><,./-="
+}
+
 
 const typeOfFunction = [
   function upperCase() {
@@ -33,22 +36,25 @@ function generatePassword() {
     alert("No box checked. Please check at least one box.");
     return;
   }
+  // Write password to the #password input
+  let passwordText = document.querySelector("#password");
+
+  let length = document.getElementById("length");
+
+  let pw = "";
+
+  while(pw.length < length.value) {
+    let selectingFunction = typeOfFunction[Math.floor(Math.random() * typeOfFunction.length)];
+    let isChecked = document.getElementById(selectingFunction.name).checked;
+    if (isChecked) {
+      pw += selectingFunction();
+    }
+  }
+  passwordText.innerHTML = pw;
 }
 
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-  
-}
-
+let generateBtn = document.getElementById("generate");
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", );
-
-
+  generateBtn.addEventListener("click", generatePassword);
