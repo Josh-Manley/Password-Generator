@@ -44,10 +44,13 @@ function generatePassword() {
   let length = document.getElementById("length");
 
   let password = "";
-
+  // while loop that stops once password length is equal to the length value
   while(password.length < length.value) {
+    // randomly selects functions in the typeOfFunction array
     let selectingFunction = typeOfFunction[Math.floor(Math.random() * typeOfFunction.length)];
+    // puts only checked functions in variable
     let isChecked = document.getElementById(selectingFunction.name).checked;
+    // only checked checkboxes will be added to the password
     if (isChecked) {
       password += selectingFunction();
     }
