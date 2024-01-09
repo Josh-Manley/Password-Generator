@@ -6,7 +6,7 @@ const types = {
   symbols: "!@#$%^&*()_+~\`|}{[]:;?><,./-="
 }
 
-
+// Array of functions that choose random characters from type.keys
 const typeOfFunction = [
   function upperCase() {
     return types.upperCase[Math.floor(Math.random() * types.upperCase.length)];
@@ -26,12 +26,14 @@ const typeOfFunction = [
 ];
 
 function generatePassword() {
-
+// Connects the variables to their HTML elements 
+// checked returns a value 0 for unchecked and 1 for checked
   let number = document.getElementById("numbers").checked;
   let symbol = document.getElementById("symbols").checked;
   let upper = document.getElementById("upperCase").checked;
   let lower = document.getElementById("lowerCase").checked;
 
+  // if all variables are unchecked alert user to check at least one box
   if (number + symbol + upper + lower === 0) {
     alert("No box checked. Please check at least one box.");
     return;
