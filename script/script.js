@@ -32,6 +32,12 @@ let confirmNumbers = confirm('Include numbers');
   if (confirmSymbols) {
     typeOfFunction.push(() => characters.symbols[Math.floor(Math.random() * characters.symbols.length)]);
   }
+
+  if (isNaN(numberSelect) || numberSelect < 8 || numberSelect > 128) {
+    alert("Please enter a valid password length between 8 and 128 characters.");
+    return "";
+  }
+
 }
 
 // Get references to the #generate element
