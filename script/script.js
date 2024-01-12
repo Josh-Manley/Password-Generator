@@ -11,14 +11,7 @@ function generatePassword() {
 // Array of functions that choose random characters from characters.keys
 let typeOfFunction = [];
 
-
-
-// Connects the variables to their HTML elements 
-// checked returns a value 0 for unchecked and 1 for checked
-  let number = document.getElementById("numbers").checked;
-  let symbol = document.getElementById("symbols").checked;
-  let upper = document.getElementById("upperCase").checked;
-  let lower = document.getElementById("lowerCase").checked;
+let numberSelect = prompt("Choose password length (between 8 and 128 characters).");
 
   // if all variables are unchecked alert user to check at least one box
   if (number + symbol + upper + lower === 0) {
