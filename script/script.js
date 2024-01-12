@@ -38,6 +38,10 @@ let confirmNumbers = confirm('Include numbers');
     return "";
   }
 
+  if (typeOfFunction.length === 0) {
+    alert("Please select at least one character type.");
+    return "";
+  }
 }
 
 // Get references to the #generate element
