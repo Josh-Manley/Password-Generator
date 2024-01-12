@@ -22,6 +22,16 @@ let confirmLowerCase = confirm('Include lowercase characters');
 if (confirmLowerCase) {
   typeOfFunction.push(() => characters.lowerCase[Math.floor(Math.random() * characters.lowerCase.length)]);
 }
+
+let confirmNumbers = confirm('Include numbers');
+  if (confirmNumbers) {
+    typeOfFunction.push(() => characters.numbers[Math.floor(Math.random() * characters.numbers.length)]);
+  }
+
+  let confirmSymbols = confirm('Include symbols');
+  if (confirmSymbols) {
+    typeOfFunction.push(() => characters.symbols[Math.floor(Math.random() * characters.symbols.length)]);
+  }
 }
 
 // Get references to the #generate element
