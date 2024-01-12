@@ -1,31 +1,18 @@
 // Assignment code here
-const types = {
-  upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  lowerCase: "abcdefghijklmnopqrstuvwxyz",
-  numbers: "0123456789",
-  symbols: "!@#$%^&*()_+~\`|}{[]:;?><,./-="
-}
-
-// Array of functions that choose random characters from type.keys
-const typeOfFunction = [
-  function upperCase() {
-    return types.upperCase[Math.floor(Math.random() * types.upperCase.length)];
-  },
-
-  function lowerCase() {
-    return types.lowerCase[Math.floor(Math.random() * types.lowerCase.length)];
-  },
-
-  function numbers() {
-    return types.numbers[Math.floor(Math.random() * types.numbers.length)];
-  },
-
-  function symbols() {
-    return types.symbols[Math.floor(Math.random() * types.symbols.length)];
-  }
-];
 
 function generatePassword() {
+  const characters = {
+    upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    lowerCase: "abcdefghijklmnopqrstuvwxyz",
+    numbers: "0123456789",
+    symbols: "!@#$%^&*()_+~\`|}{[]:;?><,./-="
+  }
+
+// Array of functions that choose random characters from characters.keys
+let typeOfFunction = [];
+
+
+
 // Connects the variables to their HTML elements 
 // checked returns a value 0 for unchecked and 1 for checked
   let number = document.getElementById("numbers").checked;
