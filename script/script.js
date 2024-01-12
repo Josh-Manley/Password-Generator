@@ -42,6 +42,14 @@ let confirmNumbers = confirm('Include numbers');
     alert("Please select at least one character type.");
     return "";
   }
+
+  let password = "";
+  while (password.length < numberSelect) {
+    let selectingFunction = typeOfFunction[Math.floor(Math.random() * typeOfFunction.length)];
+    password += selectingFunction();
+  }
+
+  return password;
 }
 
 // Get references to the #generate element
