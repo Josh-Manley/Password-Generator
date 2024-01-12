@@ -2,7 +2,7 @@
 
 function generatePassword() {
 
-  // An object holding all the password character criteria
+  // An object holding all the password character criteria.
   const characters = {
     upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     lowerCase: "abcdefghijklmnopqrstuvwxyz",
