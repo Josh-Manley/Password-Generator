@@ -10,6 +10,10 @@ Password Generator is web app that allows the user to pick criteria and generate
 
 <img width="1710" alt="Screenshot 2024-01-16 at 6 15 03 PM" src="https://github.com/Josh-Manley/Password-Generator/assets/150214190/a860c917-1fe6-44c4-8a21-ed0150988760">
 
+## Link to site
+
+https://josh-manley.github.io/Password-Generator/
+
 ## Author and acknowledgement
 
 Josh manley,  with some help from chatgpt and scaler.com
